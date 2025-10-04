@@ -1,3 +1,4 @@
+#TC: O(n)
 def divisors_brute(n):
     result = []
     print("Brute Force Divisors:")
@@ -8,7 +9,7 @@ def divisors_brute(n):
 
 print(divisors_brute(12))
 
-
+#TC: O(sqrt(n))
 def divisors_optimized(n):
     result = []
     print("Optimized Divisors:")
@@ -18,5 +19,5 @@ def divisors_optimized(n):
             if i != n // i:  # Avoid adding the square root twice
                 result.append(n // i)
     return sorted(result)
-    
+
 print(divisors_optimized(15))
